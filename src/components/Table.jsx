@@ -54,10 +54,10 @@ const Table = () => {
 								<div className="row mt-4">
 									{[1, 1, 1, 1].map((prev, i) => {
 										return (
-											<div key={i} className="col-12">
-												<div className="d-flex justify-content-between align-items-center">
-													<div className="d-flex flex-column">
-														<div className="d-flex align-items-center">
+											<div key={i} className="col-12 w-100">
+												<div className="d-flex justify-content-between align-items-center w-100">
+													<div className="d-flex flex-column w-100">
+														<div className="d-flex align-items-center w-100">
 															<div className="mb-0">
 																<img
 																	className="logo_container"
@@ -73,15 +73,15 @@ const Table = () => {
 															</div>
 														</div>
 
-														<div className="d-flex flex-column flex-lg-row mt-2 f14 text-secondary">
+														<div className="d-flex flex-column flex-lg-row mt-2 f14 text-secondary w-100">
 															<div className="d-flex">
 																<p className="mb-0">2021-08-21 &nbsp; 22:56</p>
 																<p className="ms-5 mb-0">
 																	Network <span className="fw700">BSC</span>
 																</p>
 															</div>
-															<div className="d-flex flex-column flex-md-row mt-md-0 w-100">
-																<p className="s-flex align-items-center mb-0 md-0 ms-lg-5">
+															<div className="d-flex flex-column flex-md-row mt-md-0">
+																<p className="d-flex align-items-center mb-0 md-0 ms-lg-5">
 																	Address &nbsp;{" "}
 																	<span className="fw700">
 																		749826464879236498236498369486{" "}

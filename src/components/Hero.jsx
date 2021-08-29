@@ -70,6 +70,38 @@ const Hero = () => {
 			f1: "Convert BNB6",
 			f2: "TO NLT AND FREEZE",
 		},
+		{
+			f1: "Convert BNB6",
+			f2: "TO NLT AND FREEZE",
+		},
+		{
+			f1: "Convert BNB6",
+			f2: "TO NLT AND FREEZE",
+		},
+		{
+			f1: "Convert BNB6",
+			f2: "TO NLT AND FREEZE",
+		},
+		{
+			f1: "Convert BNB6",
+			f2: "TO NLT AND FREEZE",
+		},
+		{
+			f1: "Convert BNB6",
+			f2: "TO NLT AND FREEZE",
+		},
+		{
+			f1: "Convert BNB6",
+			f2: "TO NLT AND FREEZE",
+		},
+		{
+			f1: "Convert BNB6",
+			f2: "TO NLT AND FREEZE",
+		},
+		{
+			f1: "Convert BNB6",
+			f2: "TO NLT AND FREEZE",
+		},
 	];
 
 	const handleSelect = (prev) => {

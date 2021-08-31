@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import { AiOutlineAppstore, AiOutlineUnorderedList } from "react-icons/ai";
-import { IoIosArrowForward } from "react-icons/io";
-import { MdContentCopy } from "react-icons/md";
-import { GrLink } from "react-icons/gr";
 import TableRow from "./TableRow";
 import TableRow1 from "./TableRow1";
 

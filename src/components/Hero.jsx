@@ -214,13 +214,25 @@ const Hero = () => {
 													<label className="text-secondary" htmlFor="">
 														Amount
 													</label>
-													<label className="text-secondary" htmlFor="">
+													<label
+														className="position-relative hover_tooltip text-secondary"
+														htmlFor=""
+													>
 														<span className="fw600 text-secondary f14">
 															{balance} BNB
 														</span>{" "}
 														<span className="color1 f14 ms-1">
-															available <AiOutlineExclamationCircle />
+															available
+															<AiOutlineExclamationCircle className="ms-1" />
 														</span>
+														<div className="position-absolute tooltip_ text-center py-2 px-2">
+															<p className="text-secondary mb-0">
+																Spot amount: 3.8748346
+															</p>
+															<p className="text-secondary mb-1">
+																Total: 4.8748346 ETH Inc
+															</p>
+														</div>
 													</label>
 												</div>
 												<div className="inp_container w-100 position-relative">

@@ -260,6 +260,24 @@ button:focus {
   padding: 0.7rem 3rem;
 }
 
+.hero_container .hover_tooltip .tooltip_ {
+  display: none;
+  position: absolute;
+  top: -300%;
+  right: -50%;
+  background: #fff;
+  border: 1px solid #cecece;
+  -webkit-box-shadow: 1px 1px 10px #ececec;
+          box-shadow: 1px 1px 10px #ececec;
+  z-index: 99;
+  width: 220px;
+  border-radius: 5px;
+}
+
+.hero_container .hover_tooltip:hover .tooltip_ {
+  display: block;
+}
+
 .table_container {
   margin-top: 5rem;
   /* Styling Checkbox Starts */
@@ -412,6 +430,22 @@ button:focus {
   width: 258px;
 }
 
+.yellow_circle {
+  background: #f3ba2f;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .error_popup .MuiDialog-paperWidthSm {
   max-width: 400px !important;
 }
@@ -426,6 +460,41 @@ button:focus {
   background: #f3ba2f;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(48%, #f3ba2f), color-stop(49%, #f3ba2f), color-stop(99%, rgba(243, 186, 47, 0.857581)));
   background: linear-gradient(0deg, #f3ba2f 48%, #f3ba2f 49%, rgba(243, 186, 47, 0.857581) 99%);
+}
+
+.withdraw_popup .MuiDialog-paperWidthSm {
+  min-width: 500px !important;
+}
+
+.withdraw_popup .logo {
+  width: 20px;
+  height: auto;
+}
+
+.withdraw_popup input {
+  border: none;
+  /* Chrome, Safari, Edge, Opera */
+}
+
+.withdraw_popup input:focus {
+  outline: none;
+}
+
+.withdraw_popup input::-moz-selection {
+  background-color: transparent;
+}
+
+.withdraw_popup input::selection {
+  background-color: transparent;
+}
+
+.withdraw_popup input::-webkit-outer-spin-button, .withdraw_popup input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.withdraw_popup input.addrr {
+  width: 260px;
 }
 
 .slider_container .MuiSlider-root {
@@ -463,9 +532,21 @@ button:focus {
   color: #989898;
 }
 
+@media screen and (max-width: 998px) {
+  .hero_container .hover_tooltip .tooltip_ {
+    right: 0%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .hero_container {
     padding-top: 7rem;
+  }
+  .withdraw_popup .MuiDialog-paperWidthSm {
+    min-width: auto !important;
+  }
+  .withdraw_popup input.addrr {
+    width: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

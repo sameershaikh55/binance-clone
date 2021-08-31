@@ -552,6 +552,14 @@ button {
 	.hero_container .hover_tooltip .tooltip_ {
 		right: 0%;
 	}
+	.dataTable {
+		min-width: 100% !important;
+		overflow-x: auto !important;
+
+		table {
+			width: 100% !important;
+		}
+	}
 }
 
 @media screen and (max-width: 768px) {

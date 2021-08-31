@@ -9,7 +9,13 @@ import { SuccessMessage } from "./SuccessMessage";
 import Slider from "@material-ui/core/Slider";
 
 const Hero = () => {
+	let balance = 50000;
+	let fee = 1200;
+
 	const [inpBtn, setInpBtn] = useState(false);
+	const [inpField, setInpField] = useState(12500);
+	const [slider, setSlider] = useState(25);
+	const [rAmount, setRAmount] = useState(inpField + fee);
 	const [open, setOpen] = useState(false);
 	const [open2, setOpen2] = useState(false);
 	const [select, setSelect] = useState(false);
@@ -18,17 +24,12 @@ const Hero = () => {
 		f2: "TO NLT AND FREEZE",
 	});
 
-	let balance = 50000;
-
-	// STATE FOR INPUT FIELD
-	const [inpField, setInpField] = useState(12500);
-	const [slider, setSlider] = useState(25);
-
 	// ONCHANGE HANDLE START
 	const handleChange = (e) => {
 		let inpConvert = (e.target.value / balance) * 100;
 		setInpField(e.target.value);
 		setSlider(inpConvert);
+		setRAmount(inpField + fee);
 	};
 
 	// SLIDER CHANGE FUNCTION
@@ -36,6 +37,7 @@ const Hero = () => {
 		let inpConvert = (newValue / 100) * balance;
 		setSlider(newValue);
 		setInpField(inpConvert);
+		setRAmount(inpField + fee);
 	}
 
 	const modalFunction = () => {
@@ -285,9 +287,11 @@ const Hero = () => {
 											<h6 className="first color1 fw600">Receive amount</h6>
 											<div className="d-flex flex-column flex-md-row justify-content-between w-100 align-items-md-center mt-2">
 												<div>
-													<h3 className="fw-bold mb-0">999.9999998698 NLT</h3>
+													<h3 className="fw-bold mb-0">
+														{inpField && rAmount} NLT
+													</h3>
 													<p className="fw600 f14 text-secondary">
-														0.00005 NLT processing fee included{" "}
+														{fee} NLT processing fee included{" "}
 														<AiOutlineExclamationCircle />
 													</p>
 												</div>

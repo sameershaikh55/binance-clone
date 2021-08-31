@@ -3,7 +3,8 @@ import { AiOutlineAppstore, AiOutlineUnorderedList } from "react-icons/ai";
 import { IoIosArrowForward } from "react-icons/io";
 import { MdContentCopy } from "react-icons/md";
 import { GrLink } from "react-icons/gr";
-import logo from "../assets/logo.png";
+import TableRow from "./TableRow";
+import TableRow1 from "./TableRow1";
 
 const Table = () => {
 	const [sort, setSort] = useState(false);
@@ -53,77 +54,8 @@ const Table = () => {
 								{(!sort && (
 									<div className="row mt-4">
 										{[1, 1, 1, 1].map((prev, i) => {
-											return (
-												<div key={i} className="col-12 w-100">
-													<div className="d-flex justify-content-between align-items-center w-100">
-														<div className="d-flex flex-column w-100">
-															<div className="d-flex align-items-center w-100">
-																<div className="mb-0">
-																	<img
-																		className="logo_container"
-																		src={logo}
-																		alt=""
-																	/>
-																	<span className="ms-3 f16 fw-bold">
-																		9.9995 BNB
-																	</span>
-																</div>
-																<div className="completed_green px-2 f14 ms-4">
-																	Completed
-																</div>
-															</div>
-
-															<div className="d-flex flex-column flex-lg-row mt-2 f14 text-secondary w-100">
-																<div className="d-flex">
-																	<p className="mb-0">
-																		2021-08-21 &nbsp; 22:56
-																	</p>
-																	<p className="ms-5 mb-0">
-																		Network <span className="fw700">BSC</span>
-																	</p>
-																</div>
-																<div className="d-flex flex-column flex-md-row mt-md-0">
-																	<p className="d-flex align-items-center mb-0 md-0 ms-lg-5">
-																		Address &nbsp;{" "}
-																		<span className="fw700">
-																			749826464879236498236498369486{" "}
-																			<GrLink
-																				fontSize="0.8rem"
-																				className="text-secondary ms-1 pointer"
-																			/>
-																			<MdContentCopy
-																				fontSize="0.8rem"
-																				className="text-secondary ms-1 pointer"
-																			/>
-																		</span>
-																	</p>
-																	<p className="s-flex align-items-center ms-0 ms-md-5 mb-0">
-																		TxID &nbsp;
-																		<span className="fw700">
-																			947984...9879847{" "}
-																			<GrLink
-																				fontSize="0.8rem"
-																				className="text-secondary ms-1 pointer"
-																			/>
-																			<MdContentCopy
-																				fontSize="0.8rem"
-																				className="text-secondary ms-1 pointer"
-																			/>
-																		</span>
-																	</p>
-																</div>
-															</div>
-														</div>
-														<div>
-															<IoIosArrowForward className="pointer p-1 bg-light h4 rounded-circle" />
-														</div>
-													</div>
-
-													<hr className="my-4" />
-												</div>
-											);
+											return <TableRow ind={i} />;
 										})}
-
 										<span>
 											<button className="bg-transparent text-secondary border-0 fw-bold mb-5 text-decoration-underline">
 												View all
@@ -146,42 +78,7 @@ const Table = () => {
 											</thead>
 											<tbody>
 												{[1, 1, 1, 1, 1, 1, 1, 1].map((prev, i) => {
-													return (
-														<tr key={i}>
-															<td className="color1 fw600 f14 py-4">
-																2021-08-21 22:56
-															</td>
-															<td className="color1 fw600 f14">BNB</td>
-															<td className="color1 fw600 f14">9.9995</td>
-															<td className="color1 fw600 f14">
-																749826464879236498236498369486{" "}
-																<GrLink
-																	fontSize="0.8rem"
-																	className="text-secondary ms-1 pointer"
-																/>
-																<MdContentCopy
-																	fontSize="0.8rem"
-																	className="text-secondary ms-1 pointer"
-																/>
-															</td>
-															<td className="color1 fw600 f14">
-																{" "}
-																947984...9879847{" "}
-																<GrLink
-																	fontSize="0.8rem"
-																	className="text-secondary ms-1 pointer"
-																/>
-																<MdContentCopy
-																	fontSize="0.8rem"
-																	className="text-secondary ms-1 pointer"
-																/>
-															</td>
-															<td className="color1 fw600 f14">Completed</td>
-															<td className="color1 fw600 f14">
-																<IoIosArrowForward className="pointer p-1 bg-light h4 rounded-circle" />
-															</td>
-														</tr>
-													);
+													return <TableRow1 ind={i} />;
 												})}
 											</tbody>
 										</table>

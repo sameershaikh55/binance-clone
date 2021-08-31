@@ -386,6 +386,32 @@ button:focus {
   -o-transition: all 0.3s ease-out;
 }
 
+.table_container input {
+  border: none;
+  /* Chrome, Safari, Edge, Opera */
+}
+
+.table_container input:focus {
+  outline: none;
+}
+
+.table_container input::-moz-selection {
+  background-color: transparent;
+}
+
+.table_container input::selection {
+  background-color: transparent;
+}
+
+.table_container input::-webkit-outer-spin-button, .table_container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.table_container input.addrr {
+  width: 258px;
+}
+
 .error_popup .MuiDialog-paperWidthSm {
   max-width: 400px !important;
 }

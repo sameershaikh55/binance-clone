@@ -394,6 +394,28 @@ button {
 		-ms-transition: all 0.3s ease-out;
 		-o-transition: all 0.3s ease-out;
 	}
+
+	input {
+		border: none;
+
+		&:focus {
+			outline: none;
+		}
+		&::selection {
+			background-color: transparent;
+		}
+
+		/* Chrome, Safari, Edge, Opera */
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+	}
+
+	input.addrr {
+		width: 258px;
+	}
 }
 
 .error_popup {

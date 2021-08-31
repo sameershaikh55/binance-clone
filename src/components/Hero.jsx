@@ -21,16 +21,21 @@ const Hero = () => {
 	let balance = 50000;
 
 	// STATE FOR INPUT FIELD
-	const [inpField, setInpField] = useState(10);
+	const [inpField, setInpField] = useState(12500);
+	const [slider, setSlider] = useState(25);
 
 	// ONCHANGE HANDLE START
 	const handleChange = (e) => {
+		let inpConvert = (e.target.value / balance) * 100;
 		setInpField(e.target.value);
+		setSlider(inpConvert);
 	};
 
 	// SLIDER CHANGE FUNCTION
 	function slideChange(event, newValue) {
-		setInpField(newValue);
+		let inpConvert = (newValue / 100) * balance;
+		setSlider(newValue);
+		setInpField(inpConvert);
 	}
 
 	const modalFunction = () => {
@@ -41,8 +46,31 @@ const Hero = () => {
 		}
 	};
 
+	const marks = [
+		{
+			value: 0,
+			label: "0%",
+		},
+		{
+			value: 25,
+			label: "25%",
+		},
+		{
+			value: 50,
+			label: "50%",
+		},
+		{
+			value: 75,
+			label: "75%",
+		},
+		{
+			value: 100,
+			label: "100%",
+		},
+	];
+
 	function valuetext(value) {
-		return `${value}°C`;
+		return `${value}%`;
 	}
 
 	const selectData = [
@@ -204,18 +232,22 @@ const Hero = () => {
 													/>
 													<div className="inp_btns">
 														<button
-															onClick={() => setInpBtn(false)}
-															className={`border-0 bg-transparent ${
-																(!inpBtn && "color2") || "text-secondary"
-															} f14 fw600 pe-2`}
+															onClick={() => {
+																setInpBtn(true);
+																setInpField(balance);
+																setSlider((balance / balance) * 100);
+															}}
+															className={`${
+																(inpBtn && "color2") || "text-secondary"
+															}  bg-transparent f14 fw600 pe-2 border-0`}
 														>
 															MAX
 														</button>
 														<button
-															onClick={() => setInpBtn(true)}
-															className={`${
-																(inpBtn && "color2") || "text-secondary"
-															} border-bottom-0 border-top-0 border-end-0 ps-2 border-left border-1 bg-transparent f14 fw600`}
+															onClick={() => setInpBtn(false)}
+															className={`border-0 bg-transparent ${
+																(!inpBtn && "color2") || "text-secondary"
+															} f14 fw600 border-bottom-0 border-top-0 border-start-2 ps-2 border-left border-1`}
 														>
 															BNB
 														</button>
@@ -234,14 +266,15 @@ const Hero = () => {
 												<div className="row mt-2 mt-md-0">
 													<div className="slider_container col-md-6">
 														<Slider
-															value={inpField}
+															value={slider}
 															defaultValue={10}
 															getAriaValueText={valuetext}
 															onChange={slideChange}
 															valueLabelDisplay="auto"
-															step={10}
-															min={10}
-															max={1000}
+															step={25}
+															min={0}
+															max={100}
+															marks={marks}
 														/>
 													</div>
 												</div>

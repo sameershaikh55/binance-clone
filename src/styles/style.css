@@ -427,6 +427,16 @@ button:focus {
   height: 4px;
 }
 
+.dataTable tr td {
+  vertical-align: middle;
+}
+
+.dataTable .table > :not(:last-child) > :last-child > * {
+  border-bottom-color: #f1f1f1;
+  background-color: #f1f1f1;
+  color: #989898;
+}
+
 @media screen and (max-width: 768px) {
   .hero_container {
     padding-top: 7rem;

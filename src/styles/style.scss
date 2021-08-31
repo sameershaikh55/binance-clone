@@ -446,6 +446,21 @@ button {
 }
 // SLIDER STYLING END
 
+// DATA TABLE START
+.dataTable {
+	tr {
+		td {
+			vertical-align: middle;
+		}
+	}
+	.table > :not(:last-child) > :last-child > * {
+		border-bottom-color: #f1f1f1;
+		background-color: #f1f1f1;
+		color: #989898;
+	}
+}
+// DATA TABLE END
+
 // MEDIA QUERIES START
 @media screen and (max-width: 998px) {
 }
